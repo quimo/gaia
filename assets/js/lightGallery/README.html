@@ -1,0 +1,164 @@
+<p><img src="https://travis-ci.org/sachinchoolur/lightGallery.svg?branch=master" alt="travis">
+<img src="https://img.shields.io/bower/v/lightgallery.svg" alt="bower">
+<img src="https://img.shields.io/npm/v/lightgallery.svg" alt="npm"></p>
+<h1 id="lightgallery">lightGallery</h1>
+<p>A customizable, modular, responsive, lightbox gallery plugin for jQuery.
+<img src="https://raw.githubusercontent.com/sachinchoolur/lightGallery/master/lib/lg.png" alt="lightgallery"></p>
+<h2 id="demo">Demo</h2>
+<p><a href="http://sachinchoolur.github.io/lightGallery/">JQuery lightGallery demo</a>. <a href="http://codepen.io/sachinchoolur/details/QjLNMM/">Codepen demo</a> </p>
+<h2 id="main-features">Main features</h2>
+<ul>
+<li>Fully responsive.</li>
+<li>Modular architecture with built in plugins.</li>
+<li>Touch and support for mobile devices.</li>
+<li>Mouse drag supports for desktops.</li>
+<li>Animated thumbnails.</li>
+<li>Youtube Vimeo Dailymotion and html5 videos Support.</li>
+<li>20+ Hardware-Accelerated CSS3 transitions.</li>
+<li>Dynamic mode.</li>
+<li>Full screen support.</li>
+<li>Supports zoom.</li>
+<li>Browser history API.</li>
+<li>Responsive images.</li>
+<li>HTML iframe support.</li>
+<li>Multiple instances on one page.</li>
+<li>Easily customizable via CSS (SCSS) and Settings.</li>
+<li>Smart image preloading and code optimization.</li>
+<li>Keyboard Navigation for desktop.</li>
+<li>Font icon support.</li>
+<li>And many more.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h4 id="install-with-bower">Install with Bower</h4>
+<p>You can Install lightGallery using the <a href="http://bower.io">Bower</a> package manager.</p>
+<pre><code class="lang-sh">$ bower install lightgallery --save
+</code></pre>
+<h4 id="npm">npm</h4>
+<p>You can also find ladda-angular on <a href="http://npmjs.org">npm</a>.</p>
+<pre><code class="lang-sh">$ npm install lightgallery
+</code></pre>
+<h4 id="download-from-github">Download from Github</h4>
+<p>You can also directly download lightgallery from github.</p>
+<h4 id="include-css-and-javascript-files">Include CSS and Javascript files</h4>
+<p>First of all add lightgallery.css in the &lt;head&gt; of the document.</p>
+<pre><code class="lang-html">&lt;head&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/lightGallery.css&quot; /&gt; 
+&lt;/head&gt;
+</code></pre>
+<p>Then include jQuery and lightgallery.min.js into your document.
+If you want to include any lightgallery plugin you can include it after lightgallery.min.js.</p>
+<pre><code class="lang-html">&lt;body&gt;
+    ....
+
+    &lt;!-- jQuery version must be &gt;= 1.8.0; --&gt;
+    &lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) --&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- lightgallery plugins --&gt;
+    &lt;script src=&quot;js/lg-thumbnail.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/lg-fullscreen.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<h5 id="the-markup">The markup</h5>
+<p>lightgallery does not force you to use any kind of markup. you can use whatever markup you want. But i suggest you to use the following markup. <a href="http://sachinchoolur.github.io/lightGallery/demos/html-markup.html">Here</a> you can find the detailed examples of deferent kind of markups.</p>
+<pre><code class="lang-html">&lt;div id=&quot;lightgallery&quot;&gt;
+  &lt;a href=&quot;img/img1.jpg&quot;&gt;
+      &lt;img src=&quot;img/thumb1.jpg&quot; /&gt;
+  &lt;/a&gt;
+  &lt;a href=&quot;img/img2.jpg&quot;&gt;
+      &lt;img src=&quot;img/thumb2.jpg&quot; /&gt;
+  &lt;/a&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+<h4 id="call-the-plugin">Call the plugin</h4>
+<p>Finally you need to initiate the gallery by adding the following code.</p>
+<pre><code class="lang-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
+    $(document).ready(function() {
+        $(&quot;#lightgallery&quot;).lightGallery(); 
+    });
+&lt;/script&gt;
+</code></pre>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html">API Reference</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#events">Events</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#methods">Methods</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#attributes">Data Attributes</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#dynamic">Dynamic variables</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#sass">Sass variables</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/plugin-api.html">Module API</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/themes/">Themes</a></li>
+</ul>
+<h2 id="demos-">Demos </h2>
+<ul>
+<li>Thumbnails<ul>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/">Gallery with animated thumbnails</a> </li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/#normal-thumb">Gallery without animated thumbnails</a> </li>
+</ul>
+</li>
+<li>Youtube, Vimeo Video Gallery<ul>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/videos.html">Youtube, Vimeo Video Gallery</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/videos.html#video-without-poster">Video Gallery Without Poster</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/videos.html#video-player-param">Video Player Parameters</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/videos.html#auto-thumb">Automatically load thumbnails</a></li>
+</ul>
+</li>
+<li>Html5 Video Gallery<ul>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/html5-videos.html">Html5 Video Gallery</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/html5-videos.html#video-without-poster">Html5 video gallery with videojs</a></li>
+</ul>
+</li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/transitions.html">Transitions</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/dynamic.html">Dynamic</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/events.html">Events</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/methods.html">Methods</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/iframe.html">Iframe. External websites, Google map etc..</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/captions.html">Captions</a></li>
+<li>Responsive images<ul>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/responsive.html">Responsive images</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/responsive.html#srcset-demo">Responsive images with html5 srcset</a></li>
+</ul>
+</li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/fixed-size.html">Gallery with fixed size</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/html-markup.html">Html Markup</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/comment-box.html">Facebook comments</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/easing.html">Easing</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/hash.html">History/hash plugin</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/demos/angularjs.html">Angularjs directive</a></li>
+</ul>
+<h2 id="built-in-modules">Built in modules</h2>
+<ol>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#lg-thumbnial">Thumbnail</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#lg-autoplay">Autoplay</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#lg-video">Video</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#lg-fullscreen">Fullscreen</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#lg-pager">Pager</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#lg-zoom">Zoom</a></li>
+<li><a href="http://sachinchoolur.github.io/lightGallery/docs/api.html#lg-hash">Hash</a></li>
+</ol>
+<h2 id="support">Support</h2>
+<p>Please use GitHub <a href="https://github.com/sachinchoolur/lightGallery/issues/new">issue tracker</a> in the event that you have come across a bug or glitch. It would also be very helpful if you could add a jsFiddle, which would allow you to demonstrate the problem in question.</p>
+<p>You can post a comment <a href="http://sachinchoolur.github.io/lightGallery/#comments">here</a> to leave feedback, and offer any feature suggestions you may have for Lightgallery.</p>
+<p>Please use <a href="https://stackoverflow.com/search?q=lightgallery">stackoverflow</a> instead of github issue tracker if you need any help with implementing lightgallery in your project or if you have any personal support requests. <strong>If you need any special customization, feature or support email me at <em>sachi77n@gmail.com</em>. I can do it for reasonable price.</strong></p>
+<p>Do you like lightgallery? You can support the project by staring the github repository or <a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fabout.twitter.com%2Fresources%2Fbuttons&amp;ref_src=twsrc%5Etfw&amp;text=lightGallery%20-%20The%20complete%20%23jQuery%20lightbox%20gallery%20plugin.%20%23javascript&amp;tw_p=tweetbutton&amp;url=http%3A%2F%2Fsachinchoolur.github.io%2FlightGallery%2F">tweet</a> about this project.</p>
+<p>Follow me on twitter <a href="https://twitter.com/sachinchoolur">@sachinchoolur</a> for the latest news, updates about this project.</p>
+<h2 id="other-projects">Other Projects</h2>
+<h5 id="-jquery-lightslider-https-github-com-sachinchoolur-lightslider-"><a href="https://github.com/sachinchoolur/lightslider">jQuery lightslider</a></h5>
+<blockquote>
+<p>lightSlider is a lightweight responsive Content slider with carousel thumbnails navigation.</p>
+</blockquote>
+<h5 id="-angular-flash-https-github-com-sachinchoolur-angular-flash-"><a href="https://github.com/sachinchoolur/angular-flash">Angular flash</a></h5>
+<blockquote>
+<p>A simple lightweight flash message module for angularjs</p>
+</blockquote>
+<h5 id="-ladda-angular-https-github-com-sachinchoolur-ladda-angular-"><a href="https://github.com/sachinchoolur/ladda-angular">ladda-angular</a></h5>
+<blockquote>
+<p>Ladda button directive for angularjs</p>
+</blockquote>
+<h5 id="-teamwave-http-www-teamwave-com-kid-676v2-"><a href="http://www.teamwave.com/?kid=676V2">Teamwave</a></h5>
+<blockquote>
+<p>Integrated Suite of Business Applications.. (Not an open source project but free for the first 1,000 Companies!)</p>
+</blockquote>

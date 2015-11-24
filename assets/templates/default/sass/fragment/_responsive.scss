@@ -1,0 +1,354 @@
+//---------------------------------------------------------------------------------
+/* 	
+	BREAKPOINTS
+	- white		0
+	- orchid 		320 
+	- gold			480
+	- indigo		640
+	- olive			768
+	- tomato		1024
+	- azure			1200
+*/
+//---------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------
+// WHITE
+@include responsiveBackColor('0',white);
+@include responsiveBackColorRetina('0',white);
+@media (min-width: 0) {
+
+	//----------------------------------------------
+	// LAYOUT
+	header {
+		overflow: visible;
+	}
+	
+	.grid-col.default {
+		background: #CCC;
+	}
+		
+	.grid-col.alternate {
+		background: #EEE;
+	}
+	
+	footer > .wrapper {
+		background: $footerBackColor;
+		color: $footerForeColor;
+		nav.footer__menu {
+			ul {
+			padding: 0;
+			margin: 0;
+				li {
+					display: inline-block;
+				}
+			}	
+		}
+	}//footer
+	
+	//----------------------------------------------
+	// SEARCH
+	
+	.searchbox {
+		width: 100%;
+		height: 54px;	
+		form {
+			margin: 0 1rem;
+			height: 54px;
+			position: relative;
+			overflow: hidden;
+		}
+		.keywords {
+			height: 54px;
+			width: 100%;
+			border: none;
+			background: #EEE;
+			color: #666;
+			font-size: 1.4rem;
+			padding: 0 100px 0 1rem;
+		}
+		#search {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 54px;
+			background: $defaultButtonBackColor;
+			color: $defaultButtonForeColor;
+			border: none;
+			padding: 0 20px;
+		}
+	}//.searchbox
+	
+	//----------------------------------------------
+	// NAVIGATION
+	
+	nav.header__topmenu {
+		height: $defaultMobileSize;
+		line-height: $defaultMobileSize;
+		background: $topmenuBackColor;
+		text-align: center;
+		font-size: $topmenuFontSize;
+		color: $topmenuForeColor;
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				display: inline-block;
+				padding: 0 $defaultPadding;
+			}
+			li a {
+				color: $topmenuForeColor;
+			}
+		}	
+	}
+	
+	#togglemenu {
+		position: absolute;
+		display: block;
+		top: $defaultMobileSize;
+		right: 0;
+		height: $defaultMobileSize;
+		line-height: $defaultMobileSize;
+		width: $defaultMobileSize;
+		font-size: 1rem;
+		background: $togglemenuBackColor;
+		color: $togglemenuForeColor;
+		text-align: center;
+		cursor: pointer;
+	}
+	
+	nav.header__mainmenu {
+		width: 100%;
+		margin-top: $defaultMargin;
+		ul {
+			margin: 0;
+			padding: 0;
+			background: $menu1stLevelBackColor;
+			display: none;
+			font-size: $mainMenuFontSize;
+			li {
+                list-style-type: none;
+				position: relative;
+				float: none;
+				background: $menu1stLevelBackColor;
+				.arrow {
+					position: absolute;
+					width: $defaultMobileSize;
+					height: $defaultMobileSize;
+					top: 0;
+					right: 0;
+					color: $menu1stLevelForeColor;
+					text-align: center;
+					line-height: $defaultMobileSize;
+					cursor: pointer;
+				}
+				a {
+					color: $menu1stLevelForeColor;
+					border-bottom: 1px dotted $menu1stLevelForeColor;
+					display: block;
+					min-height: $defaultMobileSize;
+					padding-right: $defaultMobileSize !important;
+					padding: $defaultMobileSize / 5.5 0;	//circa 8px
+					&:hover {
+					}
+				}
+				
+			}//li
+			&.submenu {
+				display: none;
+				position: static;
+				width: 100%;
+				li {
+					float: none;
+					display: block;
+					position: relative;
+					background: $menu2ndLevelBackColor;
+					a {
+						padding-left: $menuRowIndent;
+						display: block;
+						background: $menu2ndLevelBackColor;
+						&:hover {
+						}
+					}
+					ul.submenu {
+						position: static;		
+						li a {
+							padding-left: $menuRowIndent * 2;
+							background: $menu3rdLevelBackColor;
+							&:hover {
+							}	
+						}
+					}
+				}
+			}//&.submenu
+		}//ul
+		ul.menu > li.last > a {
+			border-bottom: none;
+		}//ul.menu > li.last > a
+		& > ul {
+			padding: 0 $defaultPadding;
+		}
+	}//nav.header__mainmenu	
+}
+
+
+//---------------------------------------------------------------------------------
+// ORCHID
+@include responsiveBackColor('320px',orchid);
+@include responsiveBackColorRetina('320px',orchid);
+@media (min-width: 320px) {
+}
+
+	
+
+//---------------------------------------------------------------------------------
+// GOLD
+@include responsiveBackColor('480px',gold);
+@include responsiveBackColorRetina('480px',gold);
+@media (min-width: 480px) {
+}
+
+//---------------------------------------------------------------------------------
+// INDIGO
+@include responsiveBackColor('640px',indigo);
+@include responsiveBackColorRetina('640px',indigo);
+@media (min-width: 640px) {
+
+}
+
+//---------------------------------------------------------------------------------
+// DESKTOP olive
+@include responsiveBackColor('768px',olive);
+@include responsiveBackColorRetina('768px',olive);
+@media (min-width: 768px) {
+	
+	//----------------------------------------------
+	// SEARCH
+	
+	.searchbox {
+		position: absolute;
+		top: $defaultMobileSize;
+		right: 0;
+		width: 30%;
+		height: $defaultMobileSize;
+		overflow: hidden;
+		
+		form {
+			margin: 0;
+		}
+		
+		.keywords {
+			font-size: 1rem;
+			height: $defaultMobileSize;
+			padding-left: 10px;
+		}
+		
+		#search {
+			height: $defaultMobileSize;
+		}
+	}
+	
+	//----------------------------------------------
+	// NAVIGATION
+	
+	nav.header__topmenu {
+		font-size: $topmenuFontSize;
+		float: right;
+	}
+	#togglemenu {
+		display: none;
+	}
+	nav.header__mainmenu {
+		position: static;
+		a {
+			color: $menu1stLevelForeColor;
+			text-decoration: none;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			background: $menu1stLevelBackColor;
+			display: block;
+			height: $defaultMobileSize;
+			z-index: 2;
+			li {
+				position: relative;
+				display: inline-block;
+				.arrow {
+					position: absolute;
+					width: $defaultMobileSize;
+					height: $defaultMobileSize;
+					background: none;
+					top: 0;
+					right: 0;
+					color: $menu1stLevelForeColor;
+					text-align: center;
+					line-height: $defaultMobileSize;
+					cursor: pointer;
+					font-size: $mainMenuFontSize - 0.2;
+				}
+				a {
+					border-bottom: none;
+					display: block;
+					height: $defaultMobileSize;
+					line-height: $defaultMobileSize;
+					padding: 0 $defaultPadding;
+					overflow: hidden;
+					&:hover {
+					}	
+				}
+			}
+			&.submenu {
+				display: none;
+				position: absolute;
+				width: $menuWidth;
+				height: auto;
+				li {
+					float: none;
+					display: block;
+					position: relative;
+					text-align: left;
+					a {
+						padding: 0 $mainMenuRowPadding;
+						background: $menu2ndLevelBackColor;
+						&:hover {
+						}	
+					}
+					ul.submenu {
+						position: absolute;
+						top: 0;
+						right: -$menuWidth;
+						
+						li a {
+							padding: 0 $mainMenuRowPadding;
+							background: $menu3rdLevelBackColor;
+							&:hover {
+							}
+						}
+					}
+				}
+			}//&.submenu	
+		}//ul
+		ul.menu {
+			text-align: center;	//per centrare le voci di menu
+			& > li > a {
+				max-width: $menuMaxWidthRow; //limita la dimensione dell'etichetta del menu
+				text-align: center;
+			}//ul.menu > li > a
+		}	
+	}
+}	
+
+//---------------------------------------------------------------------------------
+// DESKTOP tomato
+@include responsiveBackColor('1024px',tomato);
+@include responsiveBackColorRetina('1024px',tomato);
+@media (min-width: 1024px) {
+}
+
+//---------------------------------------------------------------------------------
+// DESKTOP azure
+@include responsiveBackColor('1200px',azure);
+@include responsiveBackColorRetina('1200px',azure);
+@media (min-width: 1200px) {
+}

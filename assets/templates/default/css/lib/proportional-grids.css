@@ -1,0 +1,242 @@
+/*
+Author  : Boon
+URL     : http://builtbyboon.com
+Twitter	: http://twitter.com/mattberridge
+---------------------------------------*/
+
+/* -- Begin grids
+------------------------------------------------------------- */
+/* -- Use this wrapper if you want to divide your columns -- */
+.divide-bottom {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em; }
+
+/* -- Use this wrapper if you want to block-out a column with padding 
+Taken from http://csswizardry.com/2011/10/the-island-object/) -- */
+.island {
+  padding: 1.5em;
+  background-color: #ececec; }
+  .island :last-child {
+    margin-bottom: 0; }
+
+/* -- Setup grids with base class -- */
+.grid-wrap {
+  margin-left: -3em;
+  overflow: hidden;
+  clear: both; }
+
+.grid-col {
+  float: left;
+  padding-left: 3em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.large-gutter {
+  margin-left: -6em; }
+  .large-gutter .grid-col {
+    padding-left: 6em; }
+
+.half-gutter {
+  margin-left: -1.5em; }
+  .half-gutter .grid-col {
+    padding-left: 1.5em; }
+
+.no-gutter {
+  margin-left: 0; }
+  .no-gutter .grid-col {
+    padding-left: 0; }
+
+.reset-gutter {
+  margin-left: -3em; }
+  .reset-gutter .grid-col {
+    padding-left: 3em; }
+
+ul.grid-wrap,
+ol.grid-wrap {
+  padding-left: 0;
+  list-style: none; }
+
+li.grid-col {
+  margin-left: 0;
+  margin-bottom: 0; }
+
+.col-full,
+.col-set-full .grid-col {
+  width: 100%; }
+
+.col-one-half,
+.col-set-one-half .grid-col {
+  width: 50%; }
+
+.col-one-third,
+.col-set-one-third .grid-col {
+  width: 33.333%; }
+
+.col-one-quarter,
+.col-set-one-quarter .grid-col {
+  width: 25%; }
+
+.col-two-thirds {
+  width: 66.666%; }
+
+.col-three-quarters {
+  width: 75%; }
+
+/* -- Breakpoint (.white)
+------------------------------------------------------------- */
+@media (min-width: 0) {
+  .white-col-full,
+  .white-col-set-full .grid-col {
+    width: 100%; }
+
+  .white-col-one-half,
+  .white-col-set-one-half .grid-col {
+    width: 50%; }
+
+  .white-col-one-third,
+  .white-col-set-one-third .grid-col {
+    width: 33.333%; }
+
+  .white-col-one-quarter,
+  .white-col-set-one-quarter .grid-col {
+    width: 25%; }
+
+  .white-col-two-thirds {
+    width: 66.666%; }
+
+  .white-col-three-quarters {
+    width: 75%; } 
+}
+
+/* -- Breakpoint (.orchid)
+------------------------------------------------------------- */
+@media (min-width: 320px) {
+  .orchid-col-full,
+  .orchid-col-set-full .grid-col {
+    width: 100%; }
+
+  .orchid-col-one-half,
+  .orchid-col-set-one-half .grid-col {
+    width: 50%; }
+
+  .orchid-col-one-third,
+  .orchid-col-set-one-third .grid-col {
+    width: 33.333%; }
+
+  .orchid-col-one-quarter,
+  .orchid-col-set-one-quarter .grid-col {
+    width: 25%; }
+
+  .orchid-col-two-thirds {
+    width: 66.666%; }
+
+  .orchid-col-three-quarters {
+    width: 75%; } 
+}
+
+/* -- Breakpoint (.gold)
+------------------------------------------------------------- */
+@media (min-width: 480px) {
+  .gold-col-full,
+  .gold-col-set-full .grid-col {
+    width: 100%; }
+
+  .gold-col-one-half,
+  .gold-col-set-one-half .grid-col {
+    width: 50%; }
+
+  .gold-col-one-third,
+  .gold-col-set-one-third .grid-col {
+    width: 33.333%; }
+
+  .gold-col-one-quarter,
+  .gold-col-set-one-quarter .grid-col {
+    width: 25%; }
+
+  .gold-col-two-thirds {
+    width: 66.666%; }
+
+  .gold-col-three-quarters {
+    width: 75%; } 
+}
+
+/* -- Breakpoint (.indigo)
+------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .indigo-col-full,
+  .indigo-col-set-full .grid-col {
+    width: 100%; }
+
+  .indigo-col-one-half,
+  .indigo-col-set-one-half .grid-col {
+    width: 50%; }
+
+  .indigo-col-one-third,
+  .indigo-col-set-one-third .grid-col {
+    width: 33.333%; }
+
+  .indigo-col-one-quarter,
+  .indigo-col-set-one-quarter .grid-col {
+    width: 25%; }
+
+  .indigo-col-two-thirds {
+    width: 66.666%; }
+
+  .indigo-col-three-quarters {
+    width: 75%; } 
+}
+
+/* -- Breakpoint (.olive)
+------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .olive-col-full,
+  .olive-col-set-full .grid-col {
+    width: 100%; }
+
+  .olive-col-one-half,
+  .olive-col-set-one-half .grid-col {
+    width: 50%; }
+
+  .olive-col-one-third,
+  .olive-col-set-one-third .grid-col {
+    width: 33.333%; }
+
+  .olive-col-one-quarter,
+  .olive-col-set-one-quarter .grid-col {
+    width: 25%; }
+
+  .olive-col-two-thirds {
+    width: 66.666%; }
+
+  .olive-col-three-quarters {
+    width: 75%; } 
+}
+
+/* -- Breakpoint (.tomato)
+------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  .tomato-col-full,
+  .tomato-col-set-full .grid-col {
+    width: 100%; }
+
+  .tomato-col-one-half,
+  .tomato-col-set-one-half .grid-col {
+    width: 50%; }
+
+  .tomato-col-one-third,
+  .tomato-col-set-one-third .grid-col {
+    width: 33.333%; }
+
+  .tomato-col-one-quarter,
+  .tomato-col-set-one-quarter .grid-col {
+    width: 25%; }
+
+  .tomato-col-two-thirds {
+    width: 66.666%; }
+
+  .tomato-col-three-quarters {
+    width: 75%; } 
+}

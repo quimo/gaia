@@ -1,0 +1,69 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@charset "utf-8";
+//@import "compass/reset";
+
+/**
+ * TABLE OF CONTENTS
+ */
+
+@import 'susy';							//grid manager
+@import 'fragment/normalize';			//init
+@import 'fragment/config';				//setup
+@import 'fragment/responsive';			//responsive
+@import 'fragment/owl.carousel';  		//slider
+@import 'fragment/owl.theme';			//slider
+@import 'fragment/font-awesome.min';	//slider
+
+/**
+ * SPECIFICITY
+ * header ul#main-nav li .submenu li.child a:hover {}
+ * Specificity = (n*style) (n*id) (n*class / pseudoclass) (n*element) = 0135
+ * Mantenere la specificità BASSA. Meglio...
+ * .sub-menu a:hover {} = 0021
+ */
+
+/**
+ * NAMING CONVENTIONS
+ * All strings in classes are delimited with a hyphen (-): es. page-head
+ * Use BEM (block, element, modifiers) naming convention.
+ * Elements are delimited with two (2) underscores (__) and modifiers are delimited by two (2) hyphens (--).
+ * Blocks contains elements. Modifier is a speciefic variant of a block.
+ *	
+	.footer { (block)
+		.footer__copyright {} (element)
+		.footer__menu{} (element)
+	}
+	
+	.footer--homepage { (variant)
+		.footer__copyright {} (element)
+		.footer--homepage__menu{} (element)
+	}
+ *	
+ * If we were to add another Element—called, let’s say, .person__eye {}—to this .person {} component
+ * we would not need to step through every layer of the DOM. That is to say, the correct notation
+ * would be .person__eye {}, and not .person__head__eye {}. Your classes do not reflect the full paper-trail of the DOM.	
+ * 
+ * Markup example
+ * 
+	<div class="box  profile  profile--is-pro-user">
+		<img class="avatar  profile__image">
+		<p class="profile__bio">&nbsp;</p>
+	</div>
+ *
+ * Now we can clearly see which classes are and are not related to each other, and how; we know what
+ * classes we can’t use outside of the scope of this component; and we know which classes we may be 
+ * free to reuse elsewhere.
+ *
+ * Javascript hooks
+ *
+ * As a rule, it is unwise to bind your CSS and your JS onto the same class in your HTML.
+ * This is because doing so means you can’t have (or remove) one without (removing) the other. 
+ * It is much cleaner, much more transparent, and much more maintainable to bind your JS onto specific classes.
+ *
+ * <input type="submit" class="btn js-btn" value="Follow">
+ *
+ */

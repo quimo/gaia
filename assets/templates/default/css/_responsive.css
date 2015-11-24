@@ -1,0 +1,80 @@
+/*
+Error: Undefined variable: "$defaultMargin".
+        on line 79 of _responsive.scss
+
+74: 	display: block;
+75: 	text-align: center;
+76: 
+77: 	& > a {
+78: 		display: inline-block;
+79: 		margin: $defaultMargin auto $doubleMargin auto;
+80: 		padding: $halfPadding $defaultPadding;
+81: 		font-size: $miniSize;
+82: 		text-transform: uppercase;
+83: 		width: auto;
+84: 		
+
+Backtrace:
+_responsive.scss:79
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `map'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `_perform'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `map'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:407:in `run'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Prepros/resources/app/ruby/loader.rb:15:in `load'
+C:/Program Files (x86)/Prepros/resources/app/ruby/loader.rb:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$defaultMargin\".\A         on line 79 of _responsive.scss\A \A 74: 	display: block;\A 75: 	text-align: center;\A 76: \A 77: 	& > a {\A 78: 		display: inline-block;\A 79: 		margin: $defaultMargin auto $doubleMargin auto;\A 80: 		padding: $halfPadding $defaultPadding;\A 81: 		font-size: $miniSize;\A 82: 		text-transform: uppercase;\A 83: 		width: auto;\A 84: 		"; }

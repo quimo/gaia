@@ -1,0 +1,548 @@
+/**************************************************************
+	MIXINS SECTION
+**************************************************************/
+
+@mixin lineHeight($fontsize) {
+	line-height: $fontsize + 0.2;
+}
+
+@mixin responsiveBackColorRetina($resolution,$backcolor) {
+	@media
+	(-webkit-min-device-pixel-ratio: 2)      and (min-width: $resolution),
+	(   min--moz-device-pixel-ratio: 2)      and (min-width: $resolution),
+	(     -o-min-device-pixel-ratio: 2/1)    and (min-width: $resolution),
+	(        min-device-pixel-ratio: 2)      and (min-width: $resolution),
+	(                min-resolution: 192dpi) and (min-width: $resolution),
+	(                min-resolution: 2dppx)  and (min-width: $resolution) {
+		body { background: $backcolor }
+	}
+}
+
+@mixin responsiveBackColor($resolution,$backcolor) {
+	@media (min-width: $resolution) {
+		body { background: $backcolor }
+	}
+}	
+
+@mixin fontFamily($font, $fallback) {
+	font-family: $font, $fallback, sans-serif;
+}
+
+/**************************************************************
+	VARIABLES SECTION
+/*************************************************************/
+
+// GENERAL SETTINGS ******************************
+	
+	$wrapperWidth: 1200px;					
+	$defaultFontSize: 1rem;	
+	$defaultMobileSize: 44px;
+	$defaultMargin: 1rem;
+	$defaultPadding: 1rem;
+	$defaultRadius: 10px;	
+	$mainBrandColor: #224366;
+	$secondaryBrandColor: #226050;
+	$linkColor: tomato;
+	$defaultColor: #333;
+    $defaultBackColor: white;
+	$successColor: green;
+	$alertColor: orange;
+	$warningColor: red;
+	
+// LAYOUT ******************************
+	
+	// PRELOAD
+	
+	$preloaderBackColor: #333;
+	
+	//HEADER
+	
+	$headerForeColor: $defaultColor;
+	$headerBackColor: $defaultBackColor;
+	
+	// MENU
+	
+	$topmenuFontSize: 0.8rem;
+	$topmenuBackColor: $defaultBackColor;
+	$topmenuForeColor: #666;
+	$togglemenuBackColor: #DDD;
+	$togglemenuForeColor: $defaultBackColor;
+	$menuRowIndent: 10px;
+	$menuWidth: 300px;
+	$menuMaxWidthRow: 200px;
+	$mainMenuFontSize: 0.9rem;
+	$mainMenuRowPadding: 20px;
+	$menu1stLevelForeColor: white;
+	$menu1stLevelBackColor: black;
+	$menu2ndLevelForeColor: white;
+	$menu2ndLevelBackColor: black;
+	$menu3rdLevelForeColor: white;
+	$menu3rdLevelBackColor: black;
+	
+	//MAIN
+	
+	$mainForeColor: $defaultColor;
+	$mainBackColor: $defaultBackColor;
+	
+	//ASIDE
+	
+	$asideForeColor: $defaultColor;
+	$asideBackColor: $defaultBackColor;
+	
+	//FOOTER
+	
+	$footerForeColor: $defaultBackColor;
+	$footerBackColor: #666;
+	
+	// FORM
+	
+	$fieldPadding: $defaultPadding/2;
+	$fieldFontSize: $defaultFontSize;
+	$errorLabelColor: $warningColor;
+	$errorLabelSize: $defaultFontSize * 0.8;
+	$errorLabelMargin: 6px;
+	
+// ASSETS ******************************	
+
+	// BUTTONS
+	
+	$defaultButtonForeColor: black;
+	$defaultButtonBackColor: $defaultBackColor;
+	$successButtonForeColor: $defaultBackColor;
+	$successButtonBackColor: $successColor;
+	$alertButtonForeColor: $defaultBackColor;
+	$alertButtonBackColor: $alertColor;
+	$warningButtonForeColor: $defaultBackColor;
+	$warningButtonBackColor: $warningColor;
+	
+//GRIDS ******************************
+
+	$defaultCols: 12;
+	$defaultGutter: 1/4;		// 1/4 della larghezza delle colonne
+	$gutterPosition: 'inside'; 	// before, after, split, inside, inside-static
+	
+	$defaultGrid: (
+		columns: $defaultCols,
+		gutters: $defaultGutter,
+		math: fluid,
+		output: float,
+		gutter-position: $gutterPosition
+	);
+	
+	$largeGrid: (
+		columns: 24,
+		gutters: $defaultGutter,
+		math: fluid,
+		output: float,
+		gutter-position: split
+	);
+	
+	@include layout($defaultGrid);
+
+/**************************************************************
+	GRID SECTION
+**************************************************************/
+
+//@include layout(12 1/4 fluid float inside); 
+
+.wrapper {
+	@include container($wrapperWidth);
+	position: relative;
+}
+
+@include with-layout($largeGrid) {
+	.large_wrapper {
+		@include container($wrapperWidth);
+		position: relative;
+		.grid-col {
+			@include span(1);
+			background: $warningColor;
+			color: $defaultBackColor;
+			text-align: center;
+		}
+	}
+}	
+
+@include susy-breakpoint(1024px) {
+	main, aside {
+		@include span(6);
+	}
+	.first {
+		.grid-col {
+			@include span(6);
+		}
+	}
+	.second {
+		.grid-col {
+			@include span(12);
+		}
+	}	
+}
+
+@include susy-breakpoint(1200px) {
+	main {
+		@include span(8);
+	}
+	aside {
+		@include span(4);
+	}
+	.first {
+		.grid-col {
+			@include span(3);
+		}
+	}
+	.second {
+		.grid-col {
+			@include span(4);
+		}
+	}	
+}	
+
+/**************************************************************
+	TYPO SECTION
+**************************************************************/
+
+body {
+	/*text-rendering: optimizeLegibility;*/
+	@include fontFamily('Verdania', 'Arial');
+	font-size: $defaultFontSize; 
+	line-height: $defaultFontSize * 1.2;
+	color: $defaultColor;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: $linkColor;
+}
+
+strong {
+	font-weight: 700;
+}
+
+em {
+	font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 0 $defaultMargin 0;
+  padding: 0;
+}
+
+h1 { font-size: $defaultFontSize * 2; }
+h2 { font-size: $defaultFontSize * 1.4; }
+h3 { font-size: $defaultFontSize * 1.2; }
+h4 { font-size: $defaultFontSize * 0.9; }
+h5 { font-size: $defaultFontSize * 0.8; }
+h6 { font-size: $defaultFontSize * 0.7; }
+ 
+blockquote {
+	margin: 0 $defaultMargin * 2 $defaultMargin $defaultMargin * 2;
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	p:first-letter {
+		float: left;
+		font-size: $defaultFontSize * 4;
+		margin-right: $defaultMargin/2;
+	}
+}
+
+figure {
+	margin: $defaultMargin/2 0;
+	figcaption {
+		font-size: $defaultFontSize*0.8;
+	}
+}
+
+time {
+	font-size: $defaultFontSize*0.8;
+}
+
+mark {
+	background: $mainBrandColor;
+	color: $defaultBackColor;
+}
+
+ul {
+	padding: 0 0 0 $defaultPadding;
+	margin: 0 0 $defaultMargin 0;
+	li {
+		list-style-type: square;
+	}
+	li.star {
+		list-style-type: none;
+		&:before {
+			content: url('../templates/default/images/star.png');
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: -$defaultPadding;
+			margin-right: $defaultMargin/2;
+		}
+	}
+}//ul
+
+/**************************************************************
+	INIT SECTION
+**************************************************************/
+
+// WARNING
+
+/* immagine senza alt */
+img:not([alt]) {
+	border: 2px dotted $warningColor;
+}
+
+// HELPERS
+
+/* rimuove il box di selezione al click sulle immagini (mobile) */
+* { 
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* rimuove il box di selezione al focus sui campi */
+textarea:focus, input:focus {
+    outline: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* google maps fix */
+.gmnoprint img { max-width: none !important; }
+
+img {
+	max-width: 100%;
+}
+
+.box {
+	padding: $defaultPadding;
+}
+
+.leftfloat {
+	float: left;
+}
+
+.rightfloat {
+	float: right;
+}
+
+.full {
+	width: 100%;
+}
+
+.auto {
+	width: auto;
+}
+
+// PRELOADER
+
+#preloader { 
+	position: absolute; 
+	top: 0; 
+	left: 0;  
+	bottom: 0;
+	right: 0;
+	background-color: $preloaderBackColor; 
+	z-index: 1000;
+	width: 100%;
+	
+	.status {
+		width: 100px;  
+		position: absolute; 
+		color: $defaultBackColor;
+		left: 50%; 
+		top: 50%; 
+		text-align: center;
+		margin: 0 0 0 -50px; 
+	}
+	
+}
+
+
+// SLIDER (owl-slider)
+
+.owl-theme .owl-controls .owl-buttons div {
+	border-radius: 0 !important;
+	background: $mainBrandColor !important;
+	font-size: 1.8rem;
+	margin: 0;
+	padding: 14px 14px 8px 14px;
+	opacity: 0.8;
+}
+
+.slider .owl-buttons {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	.owl-prev {
+		position: absolute;
+		left: 0;
+	}
+	.owl-next {
+		position: absolute;
+		right: 0;
+	}
+}
+
+// TO TOP BUTTON
+
+.footer__totop {
+	padding-top: 4px; 
+	opacity: 0.6;
+	cursor: pointer;
+	text-align: center; 
+	line-height: 44px; 
+	width: 44px; 
+	height: 44px; 
+	border-radius: 100%; 
+	background: black; 
+	color: $defaultBackColor; 
+	position: fixed; 
+	bottom: $defaultMargin; 
+	right: $defaultMargin;
+}
+
+// ROW OF BUTTONS
+
+div.buttons {
+	width: auto;
+	margin: 0 auto;
+	text-align: center;
+	margin: o;
+	padding: 0;
+	div.button {
+		display: inline-block;
+	}
+}
+
+div.button {
+	& > a {
+		display: inline-block;
+		margin: $defaultMargin auto $defaultMargin auto;
+		padding: $defaultPadding/2 $defaultPadding;
+		font-size: $defaultFontSize*0.8;
+		text-transform: uppercase;
+		width: auto;
+		&.default {
+			color: $defaultButtonForeColor;
+			background: $defaultButtonBackColor;
+			border: 1px solid $defaultButtonForeColor;
+		}	
+		&.alternate {
+			color: $defaultButtonBackColor;
+			background: $defaultButtonForeColor;
+			border: 1px solid $defaultButtonBackColor;
+		}
+		&.success {
+			color: $successButtonForeColor;
+			background: $successButtonBackColor;
+			border: 1px solid $successButtonBackColor;
+		}
+		&.alert {
+			color: $alertButtonForeColor;
+			background: $alertButtonBackColor;
+			border: 1px solid $alertButtonBackColor;
+		}
+		&.warning {
+			color: $warningButtonForeColor;
+			background: $warningButtonBackColor;
+			border: 1px solid $warningButtonBackColor;
+		}
+	}
+}
+
+// SINGLE BUTTON
+
+.button.single {
+	display: block;
+	text-align: center;
+}
+
+/**************************************************************
+	FORM SECTION
+**************************************************************/
+
+form.default {
+	fieldset {
+		margin: $defaultMargin 0;
+		border: 1px solid #000;
+		padding: 0 $defaultPadding $defaultPadding $defaultPadding;
+		border-radius: $defaultRadius/2;
+		legend {
+			padding: 0 $defaultPadding/2;
+		}
+	}
+	label {
+		display: block;
+		font-weight: bold;
+		margin-top: $defaultMargin;
+		margin-bottom: $defaultMargin/2;
+	}
+	input.field {
+		-webkit-appearance: none;
+		@include fontFamily('Verdania', 'Arial');
+		font-size: $fieldFontSize;
+		padding: $fieldPadding;
+		border: 1px solid $defaultColor;
+		border-radius: $defaultRadius/2;
+		&[type='checkbox'] {
+		}
+		&:focus {
+			//box-shadow: 0 0 3px #333;
+		}
+	}
+	progress.field {
+		-webkit-appearance: none;
+	}
+	
+	select.field {
+		-webkit-appearance: none;
+		@include fontFamily('Verdania', 'Arial');
+		font-size: $fieldFontSize;
+		padding: 0 $fieldPadding*2 0 $fieldPadding;
+		border: 2px solid $defaultColor;
+		border-radius: $defaultRadius/2;
+		option {
+			padding: $fieldPadding;
+			border: 2px solid $defaultBackColor;
+		}
+		&:focus {
+			//box-shadow: 0 0 3px #333;
+		}
+	}
+	
+	textarea.field {
+		-webkit-appearance: none;
+		@include fontFamily('Verdania', 'Arial');
+		font-size: $fieldFontSize;
+		padding: $fieldPadding;
+		border: 1px solid $defaultBackColor;
+		border-radius: $defaultRadius/2;
+		&:focus {
+			//box-shadow: 0 0 3px #333;
+		}
+	}
+	label.error { // se si usa jQuery Validation Plugin
+		color: $errorLabelColor;
+		font-size: $errorLabelSize;
+		margin-top: $errorLabelMargin;
+	}
+	p small {
+		font-size: $defaultFontSize*0.8;
+	}
+	.button {
+		padding: $defaultPadding/2 $defaultPadding;
+		background: $mainBrandColor;
+		color: $defaultBackColor;
+		border: none;
+		border-radius: $defaultRadius/2;
+		font-size: $defaultFontSize;
+		cursor: pointer;
+		margin-top: $defaultMargin/2;
+	}
+}
+
