@@ -29,7 +29,6 @@ Y88b 888 Y88b 888 888 888  888  888 Y88..88P
         <meta name="description" content="[*description*]">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 		<meta name="author" content="[(site_name)]">
-		<!-- Realizzato da Zenzero Comunicazione, Parma, MESE/ANNO -->
 		
 		<!--alternate lang -->
 		<link rel="alternate" hreflang="en" href="http://www.mywebsite.com/engpage.html">
