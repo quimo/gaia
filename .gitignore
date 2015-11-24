@@ -6,7 +6,6 @@
 
 # and the config file
 /manager/includes/config.inc.php
-/manager/includes/config.inc.php.blank
 
 # except do not ignore .gitignore
 !.gitignore
